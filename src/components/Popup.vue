@@ -33,11 +33,11 @@
   }
   &__window {
     position: relative;
-    width: 600px;
+    max-width: 600px;
     border-radius: 5px;
     background: #fff;
     margin: 100px auto;
-    padding: 20px;
+    padding: 30px;
   }
   &__title {
     font-size: 1.5rem;

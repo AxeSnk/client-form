@@ -236,7 +236,7 @@
       </div>
 
       <div class="btn__wrapper">
-        <button class="btn-create">Создать</button>
+        <button class="btn btn-create">Создать</button>
       </div>
 
     </form>
@@ -255,6 +255,16 @@ export default {
   },
   data: () => ({
     isPopupVisible: false,
+    fields: [
+      {
+        name: 'test',
+        required: true
+      },
+      {
+        name: 'test 2',
+        required: false        
+      }
+    ],
     lastname: '',
     firstname: '',
     birthday: '',
@@ -360,6 +370,7 @@ input:focus{
   outline: none;
 }
 .radio-buttons {
+  display: flex;
   &__label {
     position: relative;
     margin-right: 20px;
@@ -472,7 +483,13 @@ select:focus{
   font-size: 10px;
   position: absolute;
 }
-
+.btn,
+.btn:hover,
+.btn:active {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
 .btn-create {
   padding: 10px 18px;
   font-size: 1.2rem;
@@ -484,7 +501,6 @@ select:focus{
   background: #fff;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
-  outline: none;
 }
 .btn-create:hover {
   background-color: #2EE59D;
